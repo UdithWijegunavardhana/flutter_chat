@@ -1,22 +1,19 @@
-import 'package:chat_app_ui/screens/welcome/welcome_screen.dart';
-import 'package:chat_app_ui/theme.dart';
+import 'package:chat_app/screens/chats/chats_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return const MaterialApp(
+      title: 'Chat',
       debugShowCheckedModeBanner: false,
-      theme: lightThemeData(context),
-      darkTheme: darkThemeData(context),
-      themeMode: ThemeMode.system,
-      home: WelcomeScreen(),
+      home: ChatsScreen(),
     );
   }
 }
